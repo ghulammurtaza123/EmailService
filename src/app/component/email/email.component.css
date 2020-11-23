@@ -1,0 +1,34 @@
+.field{
+
+width:100%;
+
+
+}
+mat-card{
+
+    margin:auto;
+    width:60%;
+
+
+}
+mat-card h1{
+    text-align:center;
+}
+.container{
+
+    margin-top: 23px;
+}
+
+.align{
+    text-align:center;
+}
+.align ::ng-deep .mat-progress-spinner circle, .mat-spinner circle {
+    stroke: #6ada20ab;
+}
+mat-card button{
+
+  
+    margin:5px;
+
+
+}

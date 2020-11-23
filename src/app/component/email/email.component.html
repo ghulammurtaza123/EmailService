@@ -1,0 +1,29 @@
+<div class="container">
+  
+    <mat-card>
+        <form (ngSubmit)="sendEmail()">
+        <h1 >Compose Email..</h1>
+        <mat-progress-bar mode="buffer" *ngIf="spin" style="margin: auto;"></mat-progress-bar>
+        <mat-form-field class="field" appearance="outline">
+            <mat-label>To:</mat-label>
+            <input name="to" [(ngModel)]="data.to" matInput>
+          </mat-form-field>
+          <mat-form-field class="field" appearance="outline">
+            <mat-label>Subject:</mat-label>
+            <input name="subject" [(ngModel)]="data.subject" matInput>
+          </mat-form-field>
+          <mat-form-field class="field" >
+            <mat-label>Write your message.....</mat-label>
+            <textarea  name="message" [(ngModel)]="data.message" matInput rows="15" data-enable-grammarly="true"></textarea>
+          </mat-form-field>
+          <div class="align">
+            
+             <mat-spinner *ngIf="spin"  color="success" style="margin: auto;" ></mat-spinner>
+            <button [disabled]="spin"  class="button" type="submit" mat-flat-button color="primary" >Send</button>
+          <button  class="button" type="reset" mat-flat-button color="accent" >Reset</button>
+          </div>
+        </form>
+        <!-- {{ data | json}} -->
+        </mat-card>
+    
+</div>
